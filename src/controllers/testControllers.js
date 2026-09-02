@@ -1,12 +1,17 @@
 const connection = require("../database/connection")
 
-const testConnection = ( req, res ) => {
-    const result = connection.raw("SELECT 1+1 as result")
+const testConnection = async ( req, res ) => {
 
-    console.log(result)
+try {
+    await connection.raw("SELECT 1+1 as result")
 
-    return res.send()
+    return res.json({message: "Banco Conectado com Sucesso :)"})
+    } catch (error) {
+        return res.status(500).json({message: "Erro ao conectar com o banco :("})
+    }
 }
+    
+
 
 module.exports = {
     testConnection
