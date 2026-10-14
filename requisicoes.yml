@@ -9,7 +9,7 @@ meta:
 collection:
   - name: requisicoes teste
     meta:
-      id: fld_a0f17a9ba29c49cb8b83249c7091486b
+      id: fld_560fd705bc1a4f5da0fae7c4792325bd
       created: 1790123537886
       modified: 1790123620305
       sortKey: -1790123538361
@@ -18,7 +18,7 @@ collection:
       - url: localhost:3000/generos
         name: Teste API
         meta:
-          id: req_a440a2dc62c945c099d840122b62007d
+          id: req_f0e594ee0fba43a6b70c690964619689
           created: 1788302256555
           modified: 1790123790785
           isPrivate: false
@@ -41,7 +41,7 @@ collection:
       - url: localhost:3000/test
         name: Teste conexão banco
         meta:
-          id: req_a38f5bfb6c33463c99e9c5cf9a58c1c1
+          id: req_cb50170a7c5b46ef8ba5396402f0b8ce
           created: 1788303349206
           modified: 1790123624125
           isPrivate: false
@@ -64,7 +64,7 @@ collection:
       - url: localhost:3000/test/tables
         name: Teste listar tabelas banco.
         meta:
-          id: req_c81779499f964b0ebf69d40ed11f4c46
+          id: req_e5820a55e5aa4cce9fe86e92240d0a41
           created: 1788908483663
           modified: 1790123590950
           isPrivate: false
@@ -86,7 +86,7 @@ collection:
           rebuildPath: true
   - name: Generos
     meta:
-      id: fld_d124c3ca58d645b5b3087570cea99f5a
+      id: fld_7a23f8f298444237aa14fc47bdbd36c7
       created: 1790123636442
       modified: 1790123636442
       sortKey: -1790123636442
@@ -95,7 +95,7 @@ collection:
       - url: http://localhost:3000/generos
         name: Cria genero
         meta:
-          id: req_a350d079385e4d1f9b1050f492197664
+          id: req_3c4445c9e77f4005b391fe85ef7a8ca3
           created: 1790123492429
           modified: 1790125764282
           isPrivate: false
@@ -123,16 +123,172 @@ collection:
             send: true
             store: true
           rebuildPath: true
+      - url: http://localhost:3000/generos
+        name: Lista todos genero
+        meta:
+          id: req_f1fbc5969a6a46768bda5d11da4f96b7
+          created: 1791931746578
+          modified: 1791932231383
+          isPrivate: false
+          description: ""
+          sortKey: -1790123608818.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Cria filmes
+    meta:
+      id: fld_d355de4df63f4f28bbaa4be21e46945e
+      created: 1791933237941
+      modified: 1791933237941
+      sortKey: -1790123587401.5
+      description: ""
+    children:
+      - url: http://localhost:3000/generos
+        name: Cria filmes
+        meta:
+          id: req_62692bc177ed4c27a885b2e776f5c3ed
+          created: 1791933237942
+          modified: 1791933265954
+          isPrivate: false
+          description: ""
+          sortKey: -1790123667238
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome" : "Ação"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/generos
+        name: Lista todos filmes
+        meta:
+          id: req_938207744b3d499c9db1de7013814929
+          created: 1791933237944
+          modified: 1791933460332
+          isPrivate: false
+          description: ""
+          sortKey: -1790123608818.5
+        method: GET
+        body:
+          mimeType: application/x-www-form-urlencoded
+          params:
+            - name: http://localhost:3000/generos
+              value: ""
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: application/x-www-form-urlencoded
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Diretor
+    meta:
+      id: fld_ba87a2fe1b3b432f84d78da6c3884d1c
+      created: 1791938513464
+      modified: 1791938513464
+      sortKey: -1790123611921.75
+      description: ""
+    children:
+      - url: http://localhost:3000/diretor
+        name: Cria diretor
+        meta:
+          id: req_2c15b5a543d7412da48adc42d5a6f6d1
+          created: 1791938513465
+          modified: 1791938597871
+          isPrivate: false
+          description: ""
+          sortKey: -1790123667238
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome" : "Ação"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/diretor
+        name: Lista todos diretores
+        meta:
+          id: req_859aa1b67c30402bae014a8514e9a141
+          created: 1791938513466
+          modified: 1791939826974
+          isPrivate: false
+          description: ""
+          sortKey: -1790123608818.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
     id: jar_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1790116491161
-    modified: 1790116491161
+    created: 1791931617753
+    modified: 1791931617753
 environments:
   name: Base Environment
   meta:
     id: env_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1790116491158
-    modified: 1790116491158
+    created: 1791931617750
+    modified: 1791931617750
     isPrivate: false
