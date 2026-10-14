@@ -1,4 +1,4 @@
-const FilmeModel = require("../models/FilmeModel")
+const FilmeModel = require("../models/FilmeModels")
 
 const FilmeController = {
     async getAllFilmes(req, res) {
